@@ -7,3 +7,4 @@
 5. Tree - BST
 6. HashTable
 7. Graph
+8. Recursion
