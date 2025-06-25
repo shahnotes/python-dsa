@@ -8,3 +8,12 @@
 6. HashTable
 7. Graph
 8. Recursion
+9. Heap
+10. Tree Traversal
+11. Sorting
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+12. Merge Sort
+13. Quick Sort
+14. Dynamic Programming 
