@@ -1,5 +1,5 @@
 class HashTable:
-    def __init__(self, size = 7):
+    def __init__(self, size=7):
         self.data_map = [None] * size
 
     def __hash(self, key):
@@ -7,7 +7,7 @@ class HashTable:
         for letter in key:
             hash = (hash + ord(letter) * 23) % len(self.data_map)
         return hash
-    
+
     def set_item(self, key, value):
         index = self.__hash(key)
         if self.data_map[index] == None:
@@ -21,7 +21,7 @@ class HashTable:
                 if self.data_map[index][i][0] == key:
                     return self.data_map[index][i][1]
         return None
-    
+
     def keys(self):
         all_keys = []
         for i in range(len(self.data_map)):
@@ -32,4 +32,4 @@ class HashTable:
 
     def print_table(self):
         for i, val in enumerate(self.data_map):
-            print (i, ": ", val)
+            print(i, ": ", val)

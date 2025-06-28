@@ -3,6 +3,7 @@ class Node:
         self.value = value
         self.next = None
 
+
 class LinkedList:
     def __init__(self, value):
         node = Node(value)
@@ -58,7 +59,7 @@ class LinkedList:
         if self.length == 0:
             self.tail = None
         return temp
-    
+
     def get(self, index):
         if index < 0 or index >= self.length:
             return None
@@ -95,7 +96,7 @@ class LinkedList:
             return self.pop_first()
         if index == self.length - 1:
             return self.pop()
-        prev = self.get(index -1)
+        prev = self.get(index - 1)
         temp = prev.next
         prev.next = temp.next
         temp.next = None

@@ -4,6 +4,7 @@ class Node:
         self.next = None
         self.prev = None
 
+
 class DoublyLinkedList:
     def __init__(self, value):
         node = Node(value)
@@ -22,7 +23,7 @@ class DoublyLinkedList:
             self.tail = node
         self.length += 1
         return True
-    
+
     def pop(self):
         if self.length == 0:
             return None
@@ -35,7 +36,7 @@ class DoublyLinkedList:
             self.tail.next = None
         self.length -= 1
         return temp
-    
+
     def prepend(self, value):
         node = Node(value)
         if self.length == 0:
@@ -47,7 +48,7 @@ class DoublyLinkedList:
             self.head = node
         self.length += 1
         return True
-    
+
     def pop_first(self):
         if self.length == 0:
             return None
@@ -61,7 +62,7 @@ class DoublyLinkedList:
             temp.next = None
         self.length -= 1
         return temp
-    
+
     def get(self, index):
         if index < 0 or index >= self.length:
             return None
@@ -74,14 +75,14 @@ class DoublyLinkedList:
             for _ in range(self.length - 1, index, -1):
                 temp = temp.prev
         return temp
-    
+
     def set_value(self, index, value):
         temp = self.get(index)
         if temp:
             temp.value = value
             return True
         return False
-    
+
     def insert(self, index, value):
         if index < 0 or index > self.length:
             return False
@@ -89,7 +90,7 @@ class DoublyLinkedList:
             return self.prepend(value)
         if index == self.length:
             return self.append(value)
-        
+
         node = Node(value)
         before = self.get(index - 1)
         after = before.next
@@ -101,7 +102,7 @@ class DoublyLinkedList:
 
         self.length += 1
         return True
-    
+
     def remove(self, index):
         if index < 0 or index >= self.length:
             return None
@@ -109,7 +110,7 @@ class DoublyLinkedList:
             return self.pop_first()
         if index == self.length - 1:
             return self.pop()
-        
+
         temp = self.get(index)
         temp.next.prev = temp.prev
         temp.prev.next = temp.next

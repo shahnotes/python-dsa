@@ -4,6 +4,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -40,7 +41,7 @@ class BinarySearchTree:
             else:
                 return True
         return False
-    
+
     def BFS(self):
         current_node = self.root
         queue = []

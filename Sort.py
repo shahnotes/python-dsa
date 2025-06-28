@@ -1,9 +1,10 @@
 def bubble_sort(array):
-    for i in range(len(array) -1, 0, -1):
+    for i in range(len(array) - 1, 0, -1):
         for j in range(i):
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
     return array
+
 
 def selection_sort(array):
     for i in range(len(array) - 1):
@@ -15,6 +16,7 @@ def selection_sort(array):
             array[i], array[min_index] = array[min_index], array[i]
     return array
 
+
 def insertion_sort(array):
     for i in range(1, len(array)):
         key = array[i]
@@ -24,6 +26,7 @@ def insertion_sort(array):
             array[j] = key
             j -= 1
     return array
+
 
 def merge(array1, array2):
     result = []
@@ -43,6 +46,7 @@ def merge(array1, array2):
         j += 1
     return result
 
+
 def merge_sort(array):
     if len(array) <= 1:
         return array
@@ -52,9 +56,11 @@ def merge_sort(array):
 
     return merge(left, right)
 
+
 def swap(array, i, j):
     array[i], array[j] = array[j], array[i]
     return array
+
 
 def pivot(array, left, right):
     swap_index = left
@@ -65,12 +71,14 @@ def pivot(array, left, right):
     swap(array, left, swap_index)
     return swap_index
 
+
 def quick_sort_helper(array, left, right):
     if left < right:
         pivot_index = pivot(array, left, right)
         quick_sort_helper(array, left, pivot_index - 1)
         quick_sort_helper(array, pivot_index + 1, right)
     return array
+
 
 def quick_sort(array):
     return quick_sort_helper(array, 0, len(array) - 1)
