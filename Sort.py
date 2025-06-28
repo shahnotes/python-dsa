@@ -51,3 +51,26 @@ def merge_sort(array):
     right = merge_sort(array[middle:])
 
     return merge(left, right)
+
+def swap(array, i, j):
+    array[i], array[j] = array[j], array[i]
+    return array
+
+def pivot(array, left, right):
+    swap_index = left
+    for i in range(left + 1, right + 1):
+        if array[i] < array[left]:
+            swap_index += 1
+            swap(array, swap_index, i)
+    swap(array, left, swap_index)
+    return swap_index
+
+def quick_sort_helper(array, left, right):
+    if left < right:
+        pivot_index = pivot(array, left, right)
+        quick_sort_helper(array, left, pivot_index - 1)
+        quick_sort_helper(array, pivot_index + 1, right)
+    return array
+
+def quick_sort(array):
+    return quick_sort_helper(array, 0, len(array) - 1)
