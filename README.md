@@ -4,7 +4,7 @@
 2. Doubly Linked List
 3. Stack - LIFO
 4. Queue - FIFO
-5. Tree - BST
+5. Tree - Binary Search Tree
 6. HashTable
 7. Graph
 8. Recursion
@@ -16,4 +16,10 @@
     - Insertion Sort
     - Merge Sort
     - Quick Sort
-12. Dynamic Programming 
+12. Dynamic Programming
+
+## Dynamic Programming
+
+1. Overlapping Subproblems
+2. Optimized Substructure
+3. Fibonacci Sequence
