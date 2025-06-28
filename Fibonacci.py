@@ -23,3 +23,13 @@ def fibonacci_memo(n):
     memo[n] = fibonacci_memo(n - 1) + fibonacci_memo(n - 2)
 
     return memo[n]
+
+
+def fibonacci_bottom_up(n):
+    fib_list = [0, 1]
+    global counter
+    for i in range(2, n + 1):
+        counter += 1
+        next_fib = fib_list[i - 1] + fib_list[i - 2]
+        fib_list.append(next_fib)
+    return fib_list[n]

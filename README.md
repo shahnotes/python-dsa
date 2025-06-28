@@ -23,3 +23,4 @@
 1. Overlapping Subproblems
 2. Optimized Substructure
 3. Fibonacci Sequence
+4. Bottom Up
