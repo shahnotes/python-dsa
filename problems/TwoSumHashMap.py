@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/two-sum
+
 def two_sum(nums, target):
     if type(nums) is not list:
         return []

@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/longest-substring-without-repeating-characters
+
 def longest_substring(s: str) -> int:
     char_set = set()
     left = 0
